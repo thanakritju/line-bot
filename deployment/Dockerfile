@@ -4,7 +4,7 @@ MAINTAINER Thanakrit Gwan Juthamongkhon (thanakrit.ju.work@gmail.com)
 
 WORKDIR /home
 
-ADD requirements.txt /tmp/requirements.txt
+ADD deployment/requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
 ADD app app
