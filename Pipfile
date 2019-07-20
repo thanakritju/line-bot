@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+pytest = "*"
+line-bot-sdk = "*"
 
 [requires]
 python_version = "3.7"
