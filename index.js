@@ -36,16 +36,11 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
-  if (event.message.text.startsWith("")) {
+  if (event.message.text.startsWith("schedule")) {
     scheduleMessage(event.source.groupId)
-    return client.replyMessage(event.replyToken, "Scheduled a message");
+    return client.replyMessage(event.replyToken, { type: 'text', text: "Scheduled a message"});
   }
-
-  // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
-
-  // use reply API
-  return client.replyMessage(event.replyToken, echo);
+  return Promise.resolve(null);
 }
 
 function scheduleMessage(groupId) {
