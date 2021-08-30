@@ -35,6 +35,8 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  console.log("Event: " + event)
+
   // create a echoing text message
   const echo = { type: 'text', text: event.message.text };
 
