@@ -1,0 +1,15 @@
+{
+    "name": "LINE Messaging API",
+    "description": "This is a sample application for the LINE Messaging API",
+    "keywords": ["chatbot", "line", "javascript"],
+    "env": {
+        "CHANNEL_ACCESS_TOKEN": {
+            "description": "CHANNEL_ACCESS_TOKEN",
+            "required":  true
+        },
+        "CHANNEL_SECRET": {
+            "description": "CHANNEL_SECRET",
+            "required":  true
+        }
+    }
+}
