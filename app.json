@@ -10,6 +10,10 @@
         "CHANNEL_SECRET": {
             "description": "CHANNEL_SECRET",
             "required":  true
+        },
+        "GROUP_ID": {
+            "description": "GROUP_ID",
+            "required":  true
         }
     }
 }

@@ -2,6 +2,7 @@
 
 const line = require('@line/bot-sdk');
 const express = require('express');
+const cron = require('node-cron');
 
 // create LINE SDK config from env variables
 const config = {
@@ -35,13 +36,26 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
-  console.log("Event: " + event)
+  if (event.message.text.startsWith("")) {
+    scheduleMessage(event.source.groupId)
+    return client.replyMessage(event.replyToken, "Scheduled a message");
+  }
 
   // create a echoing text message
   const echo = { type: 'text', text: event.message.text };
 
   // use reply API
   return client.replyMessage(event.replyToken, echo);
+}
+
+function scheduleMessage(groupId) {
+  cron.schedule('20 18 * * *', () => {
+    client.pushMessage(groupId, "You have to call to your bf")
+  });
+  
+  cron.schedule('0 6 * * *', () => {
+    client.pushMessage(groupId, "Good morning both")
+  });
 }
 
 // listen on port
