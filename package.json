@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/thanakritju/line-bot#readme",
   "dependencies": {
-    "ejs": "^3.1.6",
+    "@line/bot-sdk": "^7.3.0",
     "express": "^4.17.1"
   }
 }
