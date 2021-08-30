@@ -1,0 +1,22 @@
+{
+  "name": "line-bot",
+  "version": "1.0.0",
+  "description": "line-bot is a tiny sample bot application based on express.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanakritju/line-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanakritju/line-bot/issues"
+  },
+  "homepage": "https://github.com/thanakritju/line-bot#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
